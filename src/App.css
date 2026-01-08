@@ -1,42 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/images/weather_bgd.png');
+  background-repeat: repeat;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content-wrapper {
+  background-color: white;
+  border: 8px solid #000000;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 450px;
+  height: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  font-family: 'Nerko One', cursive;
+  font-size: 5rem;
+  color: #000000;
+  margin: 0;
+}
+
+.parent-message {
+  background-color: #fff4e6;
+  border-left: 6px solid #00aeef;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #333;
+  border-radius: 8px;
+}
+
+.forecast-section {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .content-wrapper {
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 300px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .parent-message {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+  
+  .forecast-section {
+    flex-direction: column;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.kids-footer {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 0 12px 12px;
+  margin-top: 30px;
 }
