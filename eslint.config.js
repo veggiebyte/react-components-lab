@@ -22,8 +22,10 @@ export default defineConfig([
         sourceType: 'module',
       },
     },
-    rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-    },
+rules: {
+  'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+  'react/prop-types': 'off',               // ADD THIS
+  'react/no-unescaped-entities': 'off',    // ADD THIS
+},
   },
 ])
